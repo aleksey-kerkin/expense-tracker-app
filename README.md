@@ -1,29 +1,28 @@
-# expense-tracker-app
+# Expense Tracker App
 
-This template should help get you started developing with Vue 3 in Vite.
+An expense tracker app built with Vue 3 and the composition API.
 
-## Recommended IDE Setup
+- Add and remove expenses/income
+- Track balance
+- Save data to local storage
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Table of contents
 
-## Customize configuration
+- [Links](#links)
+- [Screenshot](#screenshot)
+- [Built with](#built-with)
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## Links
 
-## Project Setup
+- Live Site URL: [Netlify](https://my-expense-income-tracker-app.netlify.app/)
 
-```sh
-npm install
-```
+## Screenshot
 
-### Compile and Hot-Reload for Development
+![Desktop](./public/screenshot.png)
 
-```sh
-npm run dev
-```
+## Built with
 
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+- Vue 3 + Composition API
+- [Vue Toastification](https://github.com/Maronato/vue-toastification) for notifications
+- HTML
+- CSS
