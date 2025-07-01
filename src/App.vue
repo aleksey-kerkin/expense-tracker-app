@@ -37,16 +37,31 @@ const expenses = computed(() => {
     }, 0)
     .toFixed(2);
 });
+
+const handleTransactionSubmitted = (transactionData) => {
+  console.log(generateUniqueId());
+  transactions.value.push({
+    id: generateUniqueId(),
+    text: transactionData.text,
+    amount: transactionData.amount,
+  });
+};
+
+const generateUniqueId = () => {
+  const timestamp = Date.now();
+  const randomNumber = Math.floor(Math.random() * 100000);
+  return `${timestamp}-${randomNumber}`;
+};
 </script>
 
 <template>
   <Header />
   <div class="container">
-    <Balance :total="total" />
+    <Balance :total="+total" />
     <IncomeExpenses
       :income="+income"
       :expenses="+expenses" />
     <TransactionList :transactions="transactions" />
-    <AddTransaction />
+    <AddTransaction @transactionSubmitted="handleTransactionSubmitted" />
   </div>
 </template>
