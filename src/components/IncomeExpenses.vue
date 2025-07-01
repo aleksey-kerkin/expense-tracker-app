@@ -20,7 +20,7 @@ const props = defineProps({
       <p
         id="money-plus"
         class="money plus">
-        $+{{ income }}
+        ${{ income }}
       </p>
     </div>
     <div>
