@@ -13,6 +13,13 @@ const onSubmit = () => {
     return;
   }
 
+  const numberPattern = /^-?\d+(\.\d+)?$/;
+
+  if (!numberPattern.test(amount.value)) {
+    toast.error('Amount must contain only numbers');
+    return;
+  }
+
   const transactionData = {
     text: text.value,
     amount: parseFloat(amount.value),
